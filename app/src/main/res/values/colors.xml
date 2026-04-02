@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Web Colors -->
+    <color name="textColor">#222222</color>
+    <color name="primaryColor">#FF6D1F</color>
+    <color name="secondaryColor">#F5E7C6</color>
+    <color name="teritoryColor">#FAF6ED</color>
+
+    <!-- Primary -->
+    <color name="web_primary">#2563EB</color>
+    <color name="primaryDark">#1E40AF</color>
+    <color name="primaryLight">#60A5FA</color>
+
+    <!-- Secondary -->
+    <color name="secondary">#10B981</color>
+    <color name="secondaryDark">#047857</color>
+
+    <color name="danger">#EF4444</color>
+    <color name="warning">#F59E0B</color>
+    <color name="success">#22C55E</color>
+    <color name="grayLight">#F3F4F6</color>
+    <color name="grayDark">#1F2937</color>
+
+</resources>

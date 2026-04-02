@@ -1,0 +1,88 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teritoryColor"
+    android:fitsSystemWindows="true">
+
+    <!-- HEADER -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColor"
+        android:fitsSystemWindows="true"
+        app:elevation="0dp"
+        android:stateListAnimator="@null">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarSignature"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Customer Signature"
+            app:titleTextColor="@android:color/white"
+            app:navigationIcon="@drawable/ic_back"
+            app:navigationIconTint="@android:color/white"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- CONTENT -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:hint="Enter Odometer Reading">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etOdoSignature"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="7"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Customer sign below"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/primaryColor"/>
+
+        <!-- SIGNATURE PAD -->
+        <com.example.trip_sheet_driver_android.service.SignatureView
+            android:id="@+id/signatureView"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginTop="12dp"
+            android:background="@android:color/white"/>
+
+        <!-- CLEAR BUTTON -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
+    <!-- SUBMIT BUTTON -->
+    <com.ncorti.slidetoact.SlideToActView
+        android:id="@+id/sliderSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="16dp"
+        android:layout_gravity="bottom"
+        app:text="Swipe to Submit"
+        app:outer_color="@color/primaryColor"
+        app:inner_color="@android:color/white"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

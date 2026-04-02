@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teritoryColor"
+    android:fitsSystemWindows="true">
+
+    <!-- HEADER -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/primaryColor"
+        android:fitsSystemWindows="true"
+        app:elevation="0dp"
+        android:stateListAnimator="@null">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbarOtp"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Start Trip"
+            app:titleTextColor="@android:color/white"
+            app:navigationIcon="@drawable/ic_back"
+            app:navigationIconTint="@android:color/white"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- CONTENT -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:hint="Enter Start Odometer Reading">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etOdoStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="7"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:text="Enter Start OTP"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/primaryColor"
+            android:layout_marginBottom="30dp"/>
+
+        <!-- OTP BOXES -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <EditText android:id="@+id/otp1" style="@style/OtpBox"/>
+            <EditText android:id="@+id/otp2" style="@style/OtpBox"/>
+            <EditText android:id="@+id/otp3" style="@style/OtpBox"/>
+            <EditText android:id="@+id/otp4" style="@style/OtpBox"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- SLIDE BUTTON (FOOTER SAME AS YOUR SCREEN) -->
+    <com.ncorti.slidetoact.SlideToActView
+        android:id="@+id/btnStartTrip"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        app:text="Swipe to Start Trip"
+        app:text_size="16sp"
+        app:outer_color="@color/primaryColor"
+        app:inner_color="@android:color/white"/>
+
+    <include
+        layout="@layout/fab_menu_layout"
+        android:id="@+id/fabContainer" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

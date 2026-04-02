@@ -1,0 +1,144 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fabContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="false"
+    android:focusable="false">
+
+    <!-- 🔥 RIPPLE BACKGROUND -->
+    <View
+        android:id="@+id/fabOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000"
+        android:visibility="gone"/>
+
+    <!-- FAB STACK -->
+    <LinearLayout
+        android:id="@+id/fabMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="120dp">
+
+        <!-- CALL -->
+        <LinearLayout
+            android:id="@+id/layoutCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:text="Call"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_label"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:elevation="6dp"
+                android:layout_marginEnd="10dp"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabCall"
+                android:src="@drawable/ic_call"
+                android:tint="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fabSize="mini"
+                android:elevation="8dp"
+                android:backgroundTint="@color/primaryColor"/>
+        </LinearLayout>
+
+        <!-- SMS -->
+        <LinearLayout
+            android:id="@+id/layoutSms"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:text="SMS"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_label"
+                android:paddingStart="10dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingEnd="10dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:elevation="6dp"
+                android:layout_marginEnd="10dp"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabSms"
+                android:src="@drawable/ic_sms"
+                android:tint="@android:color/white"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:backgroundTint="@color/primaryColor"/>
+        </LinearLayout>
+
+        <!-- CHAT -->
+        <LinearLayout
+            android:id="@+id/layoutChat"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:text="Chat"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:background="@drawable/bg_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:elevation="6dp"
+                android:layout_marginEnd="10dp"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabChat"
+                android:src="@drawable/ic_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:tint="@android:color/white"
+                android:backgroundTint="@color/primaryColor"/>
+        </LinearLayout>
+
+
+
+        <!-- MAIN -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabMain"
+            android:src="@drawable/ic_menu"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:tint="@android:color/white"
+            android:backgroundTint="@color/primaryColor"/>
+
+    </LinearLayout>
+
+</FrameLayout>

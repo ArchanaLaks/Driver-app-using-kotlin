@@ -1,0 +1,96 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/teritoryColor">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Center Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+
+                <!-- Title -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Owner Details"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textColor"
+                    android:gravity="center"
+                    android:layout_marginBottom="24dp"/>
+
+                <!-- Phone -->
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Phone Number"
+                    android:inputType="phone"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/edittext_bg"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Email -->
+                <EditText
+                    android:id="@+id/etEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/edittext_bg"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- PAN -->
+                <EditText
+                    android:id="@+id/etPan"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="PAN Number"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/edittext_bg"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Aadhaar -->
+                <EditText
+                    android:id="@+id/etAadhaar"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Aadhaar Number"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:paddingHorizontal="16dp"
+                    android:background="@drawable/edittext_bg"
+                    android:layout_marginBottom="32dp"/>
+
+                <!-- Proceed Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnProceedOwner"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="Proceed"
+                    android:textStyle="bold"
+                    android:backgroundTint="@color/primaryColor"
+                    android:textColor="@android:color/white"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

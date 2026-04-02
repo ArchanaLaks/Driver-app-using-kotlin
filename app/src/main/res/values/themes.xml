@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.Tripsheetdriverandroid" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Primary colors -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryVariant">@color/primaryColor</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+
+        <!-- Background -->
+        <item name="android:windowBackground">@color/teritoryColor</item>
+
+        <!-- Status bar -->
+        <item name="android:statusBarColor">@color/primaryColor</item>
+
+        <!-- Navigation bar -->
+        <item name="android:navigationBarColor">@color/teritoryColor</item>
+
+    </style>
+</resources>
